@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')  // select the parent element and querySelector is used to select the first element that matches the selector . 
+
+
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);-> this will print all the innerHTML of the children of the parent element
+        
+    // }
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild);  -> this will print the first element of the parent element
+    
+    // console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement); -> this will print the parent element of the dayOne element
+
+    // console.log(dayOne.nextElementSibling);
+
+    console.log("NODES: ", parent.childNodes);//-> this will print all the nodes of the parent element like text, comments, divs and so on and also tells kisko kya values di hui hai and if nit given then it will be null and it counts only one line break as a node uske baad waali browser pe dikhane wali line breaks ko count nahi karega
+</script>
+</html>
