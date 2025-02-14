@@ -10,17 +10,18 @@
     
 </body>
 <script>
+    //Div created in the memory but not added to the main page
     const div = document.createElement('div')
     console.log(div);
     div.className = "main"
     div.id = Math.round(Math.random() * 10 + 1)
-    div.setAttribute("title", "generated title")
+    div.setAttribute("title", "generated title") // to set attribute in the div
     div.style.backgroundColor = "green"
     div.style.padding = "12px"
-    // div.innerText = "Chai aur code"
+    // div.innerText = "Chai aur code" -> this will get the text in the div and will be displayed on the main page
     const addText = document.createTextNode("Chai aur code")
-    div.appendChild(addText)
+    div.appendChild(addText)  //2nd approach to add text in the div
 
-    document.body.appendChild(div)
+    document.body.appendChild(div) // generate new div on the main page  and append child is done to add the div in the main page 
 </script>
 </html>
