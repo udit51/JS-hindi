@@ -36,6 +36,15 @@
       background: #f9f9f9;
       border-radius: 5px;
     }
+    button{
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+     }
   </style>
 </head>
 <body>
@@ -44,6 +53,7 @@
     <div class="quote-box">
       <p id="quote">Honesty is the Best Policy</p>
     </div>
+    <button>Generate Quotes with Different Background</button>
   </div>
   <script>
     const quotes = [ 
@@ -69,20 +79,30 @@
         "Everything you’ve ever wanted is on the other side of fear. — George Addair"
     ];
 
-    function generateQuote() {  
+    /* function generateQuote() {  
         const text = document.getElementById("quote");
         const index = Math.floor(Math.random() * quotes.length);
         text.textContent = quotes[index];
-    }
+    } */
 
-    function changeBackgroundColor() {
+    /* function changeBackgroundColor() {
         const colors = ["#f4a261", "#e76f51", "#2a9d8f", "#264653", "#8ecae6", "#ffb703", "#6a0572", "#8338ec"];
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
         document.body.style.backgroundColor = randomColor;
     }
+ */
+    //setInterval(generateQuote, 2000);
+    //setInterval(changeBackgroundColor, 2000);
 
-    setInterval(generateQuote, 2000);
-    setInterval(changeBackgroundColor, 2000);
+    const button = document.querySelector("button");
+    button.addEventListener('click',()=>{   //click is operation here and it is an event
+      const text = document.getElementById("quote");
+        const index = Math.floor(Math.random() * quotes.length);
+        text.textContent = quotes[index]
+        const colors = ["#f4a261", "#e76f51", "#2a9d8f", "#264653", "#8ecae6", "#ffb703", "#6a0572", "#8338ec"];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+    })//expects a call back function
   </script>
 </body>
 </html>
