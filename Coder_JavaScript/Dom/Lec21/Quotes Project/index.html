@@ -79,6 +79,9 @@
         "Everything you’ve ever wanted is on the other side of fear. — George Addair"
     ];
 
+
+    //without events just basic js and dom
+
     /* function generateQuote() {  
         const text = document.getElementById("quote");
         const index = Math.floor(Math.random() * quotes.length);
@@ -94,6 +97,12 @@
     //setInterval(generateQuote, 2000);
     //setInterval(changeBackgroundColor, 2000);
 
+
+
+    //EVENTS IN JAVASCRIPT
+
+/* 
+    //events For mouse click
     const button = document.querySelector("button");
     button.addEventListener('click',()=>{   //click is operation here and it is an event
       const text = document.getElementById("quote");
@@ -103,6 +112,33 @@
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
         document.body.style.backgroundColor = randomColor;
     })//expects a call back function
+
+ */
+
+  /*   //for keyboard events
+    const button = document.querySelector("button");
+    button.addEventListener('keydown',()=>{   //we can also use keyup, keypress
+      const text = document.getElementById("quote");
+        const index = Math.floor(Math.random() * quotes.length);
+        text.textContent = quotes[index]
+        const colors = ["#f4a261", "#e76f51", "#2a9d8f", "#264653", "#8ecae6", "#ffb703", "#6a0572", "#8338ec"];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+    })
+
+
+ */
+    //events 
+    const button = document.querySelector("button");
+    button.addEventListener('event',()=>{   //click is operation here and it is an event
+      if(event.key=="Enter"){
+      const text = document.getElementById("quote");
+        const index = Math.floor(Math.random() * quotes.length);
+        text.textContent = quotes[index]
+        const colors = ["#f4a261", "#e76f51", "#2a9d8f", "#264653", "#8ecae6", "#ffb703", "#6a0572", "#8338ec"];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;}
+    })
   </script>
 </body>
 </html>
