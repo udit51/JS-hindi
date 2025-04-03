@@ -60,7 +60,7 @@ cart = ["pizza","coke","sandwich"];
 function placeOrder(cart){
     console.log("Talking with Domino's");
      
-    const pr = new Promise(function(resolve,reject){
+    const pr = new Promise(function(resolve,reject){    // this is the way to create a promise
 
         setTimeout(()=>{
             
